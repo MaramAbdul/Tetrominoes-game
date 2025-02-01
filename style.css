@@ -1,21 +1,124 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 * {
-    margin:0px;
-    padding:0px;
-    box-sizing:border-box;
-    font-family:"Poppins";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background: #78c1f3;
-    min-height: 100vh;
+body {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+    font-family: Arial, sans-serif;
 }
 
-canvas{
-    background: #181825;
-    box-shadow: 14px 14px 0 0 #ffffff;
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    color: white;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-board {
+    position: relative;
+    width: calc(30px * 10);
+    height: calc(30px * 20);
+    border: 2px solid #333;
+    background: #000;
+}
+
+.cell {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.score-board {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.pause-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    padding: 20px;
+    border: 2px solid #666;
+    text-align: center;
+    z-index: 100;
+}
+
+.pause-menu button {
+    width: 150px;
+    padding: 10px;
+    margin: 5px 0;
+    background: #666;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.pause-menu button:hover {
+    background: #777;
+}
+
+.controls-info {
+    position: fixed;
+    bottom: 20px;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Classic Tetris colors */
+.I {
+    background-color: #00f0f0;
+}
+
+.O {
+    background-color: #f0f000;
+}
+
+.T {
+    background-color: #a000f0;
+}
+
+.S {
+    background-color: #00f000;
+}
+
+.Z {
+    background-color: #f00000;
+}
+
+.J {
+    background-color: #0000f0;
+}
+
+.L {
+    background-color: #f0a000;
 }
